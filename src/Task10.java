@@ -5,13 +5,21 @@ public class Task10 {
         return isPowerOfTwo(n / 2);
     }
 
-    public static void main(String[] args) {
-        for (int i = 0; i <= 16; i++) {
-            if (isPowerOfTwo(i)) {
-                System.out.println(i + " is power of two");
-            } else {
-                System.out.println(i + " is not power of two");
-            }
+    // Recursive test runner to avoid 'for' loop
+    public static void testRange(int current, int limit) {
+        if (current > limit) return;
+
+        if (isPowerOfTwo(current)) {
+            System.out.println(current + " is power of two");
+        } else {
+            System.out.println(current + " is not power of two");
         }
+
+        testRange(current + 1, limit);
+    }
+
+    public static void main(String[] args) {
+        // Tests numbers from 0 to 16 without using a cycle
+        testRange(0, 16);
     }
 }
