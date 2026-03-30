@@ -1,17 +1,19 @@
 import java.util.Scanner;
 
-public class Task6 {
-    public static void reverseStrings(int n, Scanner sc) {
-        if (n == 0) return;
+public class Main {
 
-        String s = sc.next();
-        reverseStrings(n - 1, sc);
-        System.out.println(s);
+    static Scanner sc = new Scanner(System.in);
+
+    public static void reverseSequence(int n) {
+        if (n == 0) return; // base case
+
+        String s = sc.next();       // read current string
+        reverseSequence(n - 1);     // recursive call
+        System.out.println(s);      // print after → reverse order
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        reverseStrings(n, sc);
+        reverseSequence(n);
     }
 }
