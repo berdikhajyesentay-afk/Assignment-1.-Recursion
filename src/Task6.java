@@ -14,7 +14,7 @@ public class Task6 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // Ensure N is an integer before proceeding
+        
         if (sc.hasNextInt()) {
             int n = sc.nextInt();
             reverseStrings(n, sc);
