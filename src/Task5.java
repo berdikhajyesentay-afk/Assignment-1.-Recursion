@@ -23,7 +23,7 @@ public class Task5 {
         if (sc.hasNextInt()) {
             int n = sc.nextInt();
             reverseInts(n, sc);
-            System.out.println(); // For clean console output
+            System.out.println();
         }
     }
 }

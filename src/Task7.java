@@ -2,28 +2,28 @@ import java.util.Scanner;
 
 public class Task7 {
 
-    // Fill top row
+
     public static int fillTop(int[][] m, int row, int col, int n, int val, int i) {
         if (i == n) return val;
         m[row][col + i] = val;
         return fillTop(m, row, col, n, val + 1, i + 1);
     }
 
-    // Fill right column
+
     public static int fillRight(int[][] m, int row, int col, int n, int val, int i) {
         if (i == n) return val;
         m[row + i][col + n - 1] = val;
         return fillRight(m, row, col, n, val + 1, i + 1);
     }
 
-    // Fill bottom row
+
     public static int fillBottom(int[][] m, int row, int col, int n, int val, int i) {
         if (i == n) return val;
         m[row + n - 1][col + n - 1 - i] = val;
         return fillBottom(m, row, col, n, val + 1, i + 1);
     }
 
-    // Fill left column
+
     public static int fillLeft(int[][] m, int row, int col, int n, int val, int i) {
         if (i == n) return val;
         m[row + n - 1 - i][col] = val;
