@@ -46,7 +46,7 @@ public class Task7 {
         fillSpiral(m, row + 1, col + 1, n - 2, val);
     }
 
-    // Recursive print (no loops)
+    
     public static void printMatrix(int[][] m, int n, int i, int j) {
         if (i == n) return;
 
