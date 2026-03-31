@@ -17,7 +17,7 @@ public class Task8 {
             System.out.println(current.trim());
             return;
         }
-        // Start trying values from 1
+       
         tryValues(n, k, current, length, 1);
     }
 
